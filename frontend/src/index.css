@@ -1,0 +1,123 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Satoshi', sans-serif !important;
+  }
+  
+  body {
+    @apply bg-[#121214] text-gray-200 overflow-hidden m-0 p-0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* React Flow Premium Overrides */
+.react-flow__renderer {
+  @apply bg-[#121214];
+}
+
+/* Exact UI Solid Elegant Edges */
+.react-flow__edge-path {
+  stroke: rgba(255, 255, 255, 0.25) !important;
+  stroke-width: 1.5 !important;
+  transition: stroke 0.15s ease, stroke-width 0.15s ease !important;
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: rgba(255, 255, 255, 0.8) !important;
+  stroke-width: 2 !important;
+}
+
+/* Controls & MiniMap Styling */
+.react-flow__controls {
+  @apply bg-[#1A1A1D] border border-[#333] rounded-2xl overflow-hidden shadow-xl flex flex-col !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 24px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+}
+
+.react-flow__controls-button {
+  @apply bg-transparent border-b border-[#333] fill-gray-400 hover:bg-[#333] hover:fill-white transition-colors !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.react-flow__controls-button svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: none !important;
+}
+
+.react-flow__minimap {
+  @apply bg-[#1A1A1D] border border-[#333] rounded-2xl overflow-hidden shadow-xl !important;
+}
+
+.react-flow__minimap-mask {
+  fill: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Premium Form Elements & Typography Inside Nodes (Matching Screenshot) */
+.react-flow__node span.text-\[10px\],
+.react-flow__node span.text-\[11px\] {
+  font-size: 12px !important;
+  color: #A1A1AA !important;
+  font-weight: 600 !important;
+}
+
+.react-flow__node input,
+.react-flow__node select,
+.react-flow__node textarea {
+  background-color: #18181B !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  color: #E4E4E7 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  width: 100% !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.react-flow__node input:focus,
+.react-flow__node select:focus,
+.react-flow__node textarea:focus {
+  background-color: #27272A !important;
+  border-color: #52525B !important;
+}
+
+.react-flow__node select option {
+  background-color: #18181B !important;
+  color: #fff !important;
+}
+
+.react-flow__minimap-node {
+  fill: #52525B !important;
+}
+
+/* Massive invisible hit-area for React Flow Handles to make connecting effortless */
+.react-flow__handle::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  right: -14px;
+  bottom: -14px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: crosshair;
+}
