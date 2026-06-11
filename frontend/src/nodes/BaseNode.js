@@ -27,14 +27,14 @@ export const BaseNode = ({
   };
 
   return (
-    <div className={`relative min-w-[240px] w-fit max-w-[400px] rounded-[24px] bg-[#222225] border ${selected ? 'border-gray-500 shadow-2xl scale-[1.02]' : 'border-[#3F3F46] shadow-xl'} transition-all duration-200`}>
+    <div className={`relative min-w-[240px] w-fit max-w-[400px] rounded-[24px] bg-[#222225] border ${selected ? 'border-purple-500 shadow-[0_0_40px_rgba(168,85,247,0.2)] scale-[1.02] z-50' : 'border-[#3F3F46] shadow-2xl hover:border-[#71717A] hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:-translate-y-0.5'} transition-all duration-300 ease-out group`}>
       
-      {/* Exact UI Subtle Glows */}
+      {/* Exact UI Subtle Glows - only visible on hover or selection for a cleaner default state */}
       {typeof title === 'string' && title.toLowerCase().includes('image') && (
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-6 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 blur-[20px] opacity-30 rounded-full pointer-events-none"></div>
+        <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-6 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 blur-[20px] rounded-full pointer-events-none transition-opacity duration-500 ${selected ? 'opacity-40' : 'opacity-0 group-hover:opacity-20'}`}></div>
       )}
       {typeof title === 'string' && (title.toLowerCase().includes('model') || title.toLowerCase().includes('llm')) && (
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-6 bg-yellow-500 blur-[20px] opacity-20 rounded-full pointer-events-none"></div>
+        <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-6 bg-yellow-500 blur-[20px] rounded-full pointer-events-none transition-opacity duration-500 ${selected ? 'opacity-30' : 'opacity-0 group-hover:opacity-15'}`}></div>
       )}
       
       <div className="flex flex-col relative h-full rounded-[24px] overflow-visible">

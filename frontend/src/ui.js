@@ -105,7 +105,7 @@ export const PipelineUI = () => {
                     style: { strokeWidth: 1.5, stroke: 'rgba(255,255,255,0.25)' },
                 }}
             >
-                <Background color="#fff" gap={32} size={1} opacity={0.02} />
+                <Background color="#71717A" gap={20} size={1.5} opacity={0.15} />
                 <Controls />
                 <MiniMap />
             </ReactFlow>
