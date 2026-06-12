@@ -11,6 +11,11 @@ import {
 export const useStore = create((set, get) => ({
     nodes: [],
     edges: [],
+    isGraphInvalid: false,
+    isExecuting: false,
+    setGraphInvalid: (invalid) => set({ isGraphInvalid: invalid }),
+    setExecuting: (executing) => set({ isExecuting: executing }),
+    clearGraph: () => set({ nodes: [], edges: [], isGraphInvalid: false, isExecuting: false }),
     getNodeID: (type) => {
         const newIDs = {...get().nodeIDs};
         if (newIDs[type] === undefined) {

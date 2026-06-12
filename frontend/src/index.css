@@ -18,7 +18,7 @@
 
 /* React Flow Premium Overrides */
 .react-flow__renderer {
-  @apply bg-[#121214];
+  background: transparent !important;
 }
 
 /* Exact UI Solid Elegant Edges */
