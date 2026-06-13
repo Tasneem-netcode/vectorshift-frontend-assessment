@@ -60,7 +60,7 @@ export const BaseNode = ({
           <div className={`flex items-center justify-center p-1.5 rounded-lg ${meta.bg} shadow-inner border border-white/5`}>
              <Icon size={14} className={`${meta.color} drop-shadow-md`} strokeWidth={2.5} />
           </div>
-          <span className={`font-bold text-[15px] tracking-wide whitespace-nowrap drop-shadow-md ${meta.color}`}>{title}</span>
+          <span className={`font-bold text-[17px] tracking-wide whitespace-nowrap drop-shadow-md ${meta.color}`}>{title}</span>
         </div>
 
         {/* Inner Data Card */}
@@ -80,7 +80,7 @@ export const BaseNode = ({
                       id={`${id}-${input.id}`}
                       className={`!w-2 !h-2 !min-w-[8px] !min-h-[8px] !rounded-full !border-none !relative !transform-none !left-0 !top-0 !mr-2.5 !transition-all !duration-300 hover:!scale-[1.8] hover:!ring-4 hover:!ring-white/20 !z-20 ${getColorStyle(input.id)} ${isExecuting ? 'animate-pulse' : ''}`}
                     />
-                    <span className="text-[#A1A1AA] text-[13px] font-medium tracking-wide drop-shadow-sm transition-colors group-hover/handle:text-white">{input.label || input.id}</span>
+                    <span className="text-[#A1A1AA] text-[14px] font-medium tracking-wide drop-shadow-sm transition-colors group-hover/handle:text-white">{input.label || input.id}</span>
                   </div>
                 ))}
               </div>
@@ -89,7 +89,7 @@ export const BaseNode = ({
               <div className="flex flex-col gap-3 items-end">
                 {outputs.map((output) => (
                   <div key={output.id} className="relative flex items-center justify-end group/handle">
-                    <span className="text-[#A1A1AA] text-[13px] font-medium tracking-wide mr-2.5 drop-shadow-sm transition-colors group-hover/handle:text-white">{output.label || output.id}</span>
+                    <span className="text-[#A1A1AA] text-[14px] font-medium tracking-wide mr-2.5 drop-shadow-sm transition-colors group-hover/handle:text-white">{output.label || output.id}</span>
                     <Handle
                       type="source"
                       position={Position.Right}
@@ -104,7 +104,7 @@ export const BaseNode = ({
           )}
 
           {/* Children Content Area */}
-          <div className={`px-4 pb-4 ${inputs.length === 0 && outputs.length === 0 ? 'pt-4' : 'pt-2'} flex flex-col gap-3 text-[14px] text-gray-300 relative z-10`}>
+          <div className={`px-4 pb-4 ${inputs.length === 0 && outputs.length === 0 ? 'pt-4' : 'pt-2'} flex flex-col gap-3 text-[15px] text-gray-300 relative z-10`}>
             {children}
           </div>
 

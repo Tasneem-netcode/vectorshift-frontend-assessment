@@ -138,8 +138,8 @@ export const PipelineUI = () => {
                                 <span className="text-white/40 text-3xl font-light">+</span>
                             </div>
                             <div className="flex flex-col items-center gap-1.5">
-                                <span className="text-gray-300 font-semibold tracking-wide text-lg font-['Satoshi'] drop-shadow-md">Start building your AI workflow</span>
-                                <span className="text-gray-500 text-[13px] font-medium tracking-wide">Drag nodes into the canvas to create intelligent automation pipelines.</span>
+                                <span className="text-gray-300 font-semibold tracking-wide text-xl font-['Satoshi'] drop-shadow-md">Start building your AI workflow</span>
+                                <span className="text-gray-500 text-[15px] font-medium tracking-wide">Drag nodes into the canvas to create intelligent automation pipelines.</span>
                             </div>
                         </div>
                     </div>
