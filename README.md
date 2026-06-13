@@ -37,7 +37,7 @@ The backend runs a FastAPI server on port `8000`.
 ```bash
 cd backend
 pip install -r requirements.txt  # If applicable
-uvicorn main:app --reload
+python -m uvicorn main:app --reload --port 8000
 ```
 
 ### 2. Start the Frontend
