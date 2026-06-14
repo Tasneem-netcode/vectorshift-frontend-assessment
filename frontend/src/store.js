@@ -1,6 +1,6 @@
 // store.js
 
-import { create } from "zustand";
+import { createWithEqualityFn as create } from 'zustand/traditional';
 import {
     addEdge,
     applyNodeChanges,

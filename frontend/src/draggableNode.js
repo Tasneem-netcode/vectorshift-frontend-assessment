@@ -32,7 +32,7 @@ export const DraggableNode = ({ type, label }) => {
         draggable
       >
           <Icon size={15} className="opacity-70 group-hover:opacity-100 transition-opacity" strokeWidth={2} />
-          <span className="font-medium text-[15px] tracking-wide">{label}</span>
+          <span className="font-medium text-[16px] tracking-wide">{label}</span>
       </div>
     );
 };
